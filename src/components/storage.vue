@@ -1,11 +1,11 @@
 <template>
     <div>
         <p>
-            <button class="component_label" v-on:click="toggleVisible()">CPUS</button>
+            <button class="component_label" v-on:click="toggleVisible()">Storage</button>
             <span v-if="show">
                 <ul>
-                    <li v-for="cpu in theCPUS" :key="cpu.name">
-                        {{cpu.name}}: ${{cpu.price}}
+                    <li v-for="storage in theStorages" :key="storage.name">
+                        {{storage.name}}: ${{storage.price}}
                     </li>
                 </ul>
             </span>
@@ -15,15 +15,15 @@
 
 <script>
 export default {
-    name: "CPUs",
+    name: "storages",
     data() {
         return {
-            theCPUS: [{
-                name: "cpu 1",
+            theStorages: [{
+                name: "storage 1",
                 price: 100
             },
             {
-                name: "cpu 2",
+                name: "storage 2",
                 price: 150
             }
             ],

@@ -1,25 +1,43 @@
 <template>
   <div>
     <div id="cpu">
+      <div class="on_right">
+        <h3 id="profile"><a href="../user/user_page.vue">Profile</a></h3>
+      </div>
       <h1>Builder Page</h1>
-      <CPUSs/>
+      <CPUs/>
       <MOBOs/>
+      <GPUs/>
+      <RAM/>
+      <Storage/>
+      <PSUs/>
       <Coolers/>
+      <Cases/>
     </div>
   </div>
 </template>
 
 <script>
-import CPUSs from "../components/cpus.vue"
+import CPUs from "../components/cpus.vue"
 import MOBOs from "../components/motherboards.vue"
 import Coolers from "../components/coolers.vue"
+import GPUs from "../components/gpus.vue"
+import PSUs from "../components/psu.vue"
+import Cases from "../components/case.vue"
+import RAM from "../components/ram.vue"
+import Storage from "../components/storage.vue"
 
 export default {
-  name: 'HelloWorld',
+  name: 'builder',
   components: {
-    CPUSs,
+    CPUs,
     MOBOs,
-    Coolers
+    Coolers,
+    Cases,
+    GPUs,
+    PSUs,
+    RAM,
+    Storage
   },
   props: {
   }
@@ -51,4 +69,10 @@ a {
   display: inline-block;
   font-size: 16px;
 }
+
+.on_right {
+  display: flex;
+  justify-content: flex-end;
+}
+
 </style>

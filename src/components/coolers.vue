@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>
-            <button class="component_label" v-on:click="toggleVisible()">Coolers go here</button>
+            <button class="component_label" v-on:click="toggleVisible()">Coolers</button>
             <span v-if="show">
                 <ul>
                     <li v-for="cooler in theCoolers" :key="cooler.name">
