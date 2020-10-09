@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div id="cpu">
-      <div class="on_right">
-        <h3 id="profile"><a href="../user/user_page.vue">Profile</a></h3>
-      </div>
+    
       <h1>Builder Page</h1>
       <CPUs/>
       <MOBOs/>
@@ -14,7 +11,7 @@
       <Coolers/>
       <Cases/>
     </div>
-  </div>
+    
 </template>
 
 <script>
