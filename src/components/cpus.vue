@@ -4,7 +4,7 @@
             <button class="component_label" v-on:click="toggleVisible()">CPUS</button>
             <span v-if="show">
                 <ul>
-                    <li v-for="cpu in theCPUS" :key="cpu.name">
+                    <li v-for="cpu in this.$store.cpus" :key="cpu.name">
                         {{cpu.name}}: ${{cpu.price}}
                     </li>
                 </ul>
@@ -27,9 +27,13 @@ export default {
                 price: 150
             }
             ],
-            show: false
+            show: false,
+            currentCPU: null
         }
     },
+    async created() {
+    await this.$store.dispatch("getCPUs");
+  },
     methods: {
         toggleVisible() {
             if (this.show == true) {
@@ -38,6 +42,9 @@ export default {
             else {
                 this.show = true
             }
+        },
+        addToBuild() {
+            
         }
     }
 }

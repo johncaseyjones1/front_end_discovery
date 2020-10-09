@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import User from '../user/user_page.vue'
-import Builder from '../components/builder_page.vue'
+import User from '../view/user_page.vue'
+import Builder from '../view/builder_page.vue'
 
 Vue.use(VueRouter)
 
